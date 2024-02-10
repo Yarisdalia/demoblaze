@@ -49,5 +49,22 @@ public abstract class BasePage {
 
         return alertMessage;
     }
+    public String getText(WebElement element){
+        return element.getText();
+    }
+    //creamos un envoltorio de los comandos de selenium
+    public WebElement findElement( By locator){
+        return driver.findElement(locator);
+    }
+
+    // esperara unos segundos
+    public void waitForSeconds(int timeoutInSeconds) {
+        try {
+            Thread.sleep(timeoutInSeconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 
