@@ -46,6 +46,7 @@ public abstract class BasePage {
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
         String alertMessage = alert.getText();
+        alert.accept();
 
         return alertMessage;
     }
@@ -63,6 +64,14 @@ public abstract class BasePage {
             Thread.sleep(timeoutInSeconds * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+    public boolean isDisplayed(By locator){
+        try{
+            return driver.findElement(locator).isDisplayed();
+            //vamos a capturar la excepcion
+        }catch (org.openqa.selenium.NoSuchElementException e){
+            return false;
         }
     }
 
