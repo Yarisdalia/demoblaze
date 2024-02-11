@@ -15,7 +15,7 @@ public class AgregarProductoAlCarritoTest extends TestCase {
 
     @Before
     public void setUp(){
-        web = new WebBrowser("safari");
+        web = new WebBrowser("firefox");
         //instanciar la page
         homePage = new HomePage(web.getDriver());
         homePage.visit("https://www.demoblaze.com/");

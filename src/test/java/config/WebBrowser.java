@@ -5,8 +5,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
-import java.util.Optional;
-
 public class WebBrowser {
 
     // Propiedades
@@ -15,7 +13,7 @@ public class WebBrowser {
     // Constructor
     public WebBrowser(String type){
         if(type.equals("firefox")){
-            System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver");
+            System.setProperty("webdriver.gecko.driver", "./src/test/resources/geckodriver");
             driver = new FirefoxDriver();
         }
         if (type.equals("chrome")){
