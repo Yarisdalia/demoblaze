@@ -16,10 +16,10 @@ public class LoginCorrectoTest extends TestCase {
         web = new WebBrowser("safari");
         //instanciar la page
         loginPage = new LoginPage(web.getDriver());
-        loginPage.visit("https://www.demoblaze.com/");
     }
     @Test
     public void test(){
+        loginPage.visit("https://www.demoblaze.com/");
         loginPage.abrirFormularioLogin();
         loginPage.llenarFormularioLogin("yari", "1234");
         loginPage.enviarFormularioLogin();
