@@ -18,11 +18,11 @@ public class AgregarProductoAlCarritoTest extends TestCase {
         web = new WebBrowser("safari");
         //instanciar la page
         homePage = new HomePage(web.getDriver());
-        homePage.visit("https://www.demoblaze.com/");
         cartPage=new CartPage(web.getDriver());
     }
     @Test
     public void test(){
+        homePage.visit("https://www.demoblaze.com/");
         homePage.darClickEnProducto("Samsung galaxy s6");
         homePage.agregarProductoAlCarrito();
         assertTrue(homePage.verificarMensaje("Product added"));

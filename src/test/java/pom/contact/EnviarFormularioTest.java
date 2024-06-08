@@ -17,10 +17,10 @@ public class EnviarFormularioTest extends TestCase {
         web = new WebBrowser("safari");
         //instanciar la page
         contactPage = new ContactPage(web.getDriver());
-        contactPage.visit("https://www.demoblaze.com/");
     }
     @Test
     public void test(){
+        contactPage.visit("https://www.demoblaze.com/");
         contactPage.abrirFormulario();
         contactPage.llenarFormulario();
         contactPage.enviarFormulario();
